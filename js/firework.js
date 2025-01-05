@@ -58,7 +58,7 @@
     if (text != "") {
 
       var gap = 6;
-      var fontSize = 120;
+      var fontSize = 152;
 
       textctx.font = fontSize + "px Verdana";
       textctx.fillStyle = "#ffffff";
@@ -136,7 +136,7 @@
       p.x += (p.fx - p.x) / 10;
       p.y += (p.fy - p.y) / 10 - (p.alpha - 1) * p.speed;
 
-      p.alpha -= 0.006;
+      p.alpha -= 0.01;
 
       if (p.alpha <= 0) {
         particles.splice(i, 1);
@@ -155,7 +155,7 @@
   //requestAnimationFrame
   var lastStamp = 0;
   function tick(opt = 0) {
-    if (opt - lastStamp > 100) {
+    if (opt - lastStamp > 177) {
       lastStamp = opt;
       createFireworks(Math.random() * canvas.width, Math.random() * canvas.height);
     }
